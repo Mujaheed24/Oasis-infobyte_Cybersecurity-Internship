@@ -1,31 +1,22 @@
-# Oaisis-infobyte_Cybersecurity-Internship
-Cybersecurity Internship tasks
+# Oasis Infobyte Cybersecurity Internship
 
-# Task 1: Basic Network Scanning with Nmap
+## Overview
+This repository contains the practical tasks, configurations, and research reports completed during the 1-month Cybersecurity Internship at Oasis Infobyte. The objective is to demonstrate hands-on proficiency in network security, vulnerability assessment, and threat mitigation.
 
-## Objective
-Perform a network scan to identify open ports and services, and explain their significance in a security context.
+## About the Author
+I am a B.Tech Computer Science and Engineering student at Sandip University, specializing in Cybersecurity. Holding a Google Cybersecurity Professional Certificate, I actively develop security solutions such as "PhishDetector" (an ML-based real-time phishing analysis tool) and cloud-centric intrusion detection systems. This internship applies these frameworks to practical, simulated environments.
 
-## Methodology
-* **Target:** Metasploitable 2 Virtual Machine (IP: `192.168.56.101`)
-* **Command Executed:** `nmap -sV -O 192.168.56.101`
-* **Tools Used:** Nmap on Kali Linux
+## Internship Tasks
+The following modules demonstrate applied security principles:
 
-## Port Findings & Security Significance
+* **Task 1: Basic Network Scanning (Completed)**
+    * *Focus:* Service enumeration, OS fingerprinting, and vulnerability identification using Nmap.
+* **Task 2: Basic Firewall Configuration (In Progress)**
+    * *Focus:* Hardening Linux systems using UFW to manage SSH and HTTP traffic.
+* **Task 5: Social Engineering Attacks Report (Pending)**
+    * *Focus:* Analyzing phishing, pretexting, and human-centric mitigation strategies.
+* **Task 8: Network Traffic Analysis (Pending)**
+    * *Focus:* Packet capturing and unencrypted traffic filtering using Wireshark.
 
-| Port | State | Service | Version | Definition & Security Significance |
-| :--- | :--- | :--- | :--- | :--- |
-| **21/tcp** | open | ftp | vsftpd 2.3.4 | Unencrypted file transfer. Contains a known backdoor. |
-| **22/tcp** | open | ssh | OpenSSH 4.7p1 | Encrypted remote login. Essential for secure management. |
-| **23/tcp** | open | telnet | Linux telnetd | Clear-text remote login. Highly insecure (sniffable). |
-| **25/tcp** | open | smtp | Postfix smtpd | Mail server. Vulnerable to spoofing/spam relay. |
-| **53/tcp** | open | domain | ISC BIND 9.4.2 | DNS resolver. Risk of unauthorized zone transfers. |
-| **80/tcp** | open | http | Apache 2.2.8 | Web server. Prime target for web application exploits. |
-| **139/tcp**| open | netbios-ssn| Samba smbd 3.X | Shared folders. Vulnerable to remote code execution. |
-| **1524/tcp**| open | bindshell | Metasploitable root shell | **CRITICAL.** Open backdoor providing instant root access. |
-| **3306/tcp**| open | mysql | MySQL 5.0.51a | Database server. Prime target for SQL injection. |
-| **5900/tcp**| open | vnc | VNC (protocol 3.3) | Remote graphical desktop. Insecure if publicly exposed. |
-| **6667/tcp**| open | irc | UnrealIRCd | Chat service. This version has known malicious backdoors. |
-
-## Conclusion
-The target is critically vulnerable, exposing legacy protocols and intentional backdoors. Immediate firewall restriction is mandatory.
+## Deliverables Structure
+Each task is organized into its own directory containing the relevant scripts, output logs, a detailed findings report, and a link to the execution demo video.
